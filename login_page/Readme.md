@@ -41,6 +41,7 @@ Copy
 Edit
 project-folder/
 ├── index.html         # Login page
+
 ├── register.html      # Registration page
 ├── style.css          # CSS styling
 ├── DBConnection.java  # JDBC connection logic
