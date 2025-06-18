@@ -1,65 +1,65 @@
-Project Overview
-This is a standalone Java-based web application that provides a simple login and registration system. It allows users to:
+# Java Login & Registration System
 
-Register as a new user (first-time visitors)
+This is a standalone Java-based login and registration application that allows users to register and then log in securely. It’s designed for beginners who want to understand full-stack flow using Java, JDBC, MySQL, and simple web technologies.
 
-Login as existing users
+## 🔧 Features
 
-The application connects to a MySQL database via JDBC to store and retrieve user credentials securely.
+- Register new users (with validation)
+- Authenticate existing users
+- Store user data in a MySQL database
+- Simple and clean frontend using HTML and CSS
+- Organized folder structure and easy-to-read code
 
-Features
-User registration with validation
+## 🛠️ Tech Stack
 
-User login authentication
+- **Backend:** Java
+- **Database:** MySQL
+- **Database Access:** JDBC
+- **Frontend:** HTML, CSS
 
-Responsive and user-friendly frontend interface using HTML & CSS
+## 💾 How to Set It Up
 
-Clean design with additional styling for better user experience
+1. **Clone or Download the Repository**  
+   Simply download this project or clone it using Git.
 
-Technology Stack
-Backend: Java
+2. **Set Up the Database**
+   Create a MySQL database and table like below:
+   ```sql
+   CREATE DATABASE user_db;
 
-Database: MySQL
+   USE user_db;
 
-Database Connection: JDBC
-
-Frontend: HTML, CSS
-
-How to Run
-Clone the repository:
-
+   CREATE TABLE users (
+       id INT PRIMARY KEY AUTO_INCREMENT,
+       username VARCHAR(50) UNIQUE NOT NULL,
+       password VARCHAR(255) NOT NULL,
+       email VARCHAR(100)
+   );
+📁 Project Structure
 bash
 Copy
 Edit
-git clone https://github.com/udaynayani111115/Login_Page.git
-Set up your MySQL database and update the JDBC connection details in the project accordingly.
+project-folder/
+├── index.html         # Login page
+├── register.html      # Registration page
+├── style.css          # CSS styling
+├── DBConnection.java  # JDBC connection logic
+├── LoginServlet.java  # Handles login
+├── RegisterServlet.java # Handles registration
+└── README.md          # Project documentation
 
-Build and run the Java backend (using your preferred IDE or command line).
+🚀 Future Enhancements
+Add password hashing (e.g., using BCrypt)
 
-Access the application via your local server URL (e.g., http://localhost:8080 if using a server).
+Add session tracking and logout
 
-Use the login page to register a new user or login with existing credentials.
+Add validation on both frontend and backend
 
-Database Schema
-You will need a database with a table for user credentials. Example schema:
+Convert it to a Maven or Spring Boot project
 
-sql
-Copy
-Edit
-CREATE TABLE users (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(100)
-);
-Future Improvements
-Password encryption and hashing
+👨‍💻 Author
+Uday Kiran Nayani
 
-Session management and logout feature
+Feel free to use, modify, or build on top of this project for learning purposes or your own applications.
 
-Input validations on both client and server side
 
-More interactive frontend with JavaScript
-
-Contact
-For any questions or suggestions, please open an issue or contact me at Udaynayani111115@gmail.com.
